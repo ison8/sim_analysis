@@ -77,7 +77,13 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CudaCompile Include="kernel.cu" />
+    <CudaCompile Include="sim_analysis.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="analysis_header.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="read_file.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
