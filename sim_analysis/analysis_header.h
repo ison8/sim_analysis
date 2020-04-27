@@ -24,3 +24,6 @@ void readCSV(vector<string>& sim_data, string filename, double* f_size);
 
 /* 読み込んだデータを整列 */
 void arrangeData(vector<string>& sim_data, vector<double>& arranged_data, double* f_size);
+
+/* データの部分的なコピーを作成 */
+void makeCpy(vector<double>& arranged_data, double* tmp, int start_num,int tmp_size,int d_size);

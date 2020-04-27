@@ -60,3 +60,19 @@ void arrangeData(vector<string>& sim_data, vector<double>& arranged_data, double
         }
     }
 }
+
+/* データの部分的なコピーを作成 */
+void makeCpy(vector<double>& arranged_data, double* tmp, int start_num, int tmp_size,int d_size) {
+    /* コピー開始 */
+    for (int i = 0; i < tmp_size; i++) {
+        int aPos = start_num + i;
+        /* コピーするデータが残っていないときの処理 */
+        if (aPos > d_size) {
+            tmp[i] = 0;
+        }
+        /* コピーできるデータが残っているときの処理 */
+        else {
+            tmp[i] = arranged_data[aPos];
+        }
+    }
+}
